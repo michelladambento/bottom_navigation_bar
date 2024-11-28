@@ -22,6 +22,11 @@ class _HomeState extends State<Home> {
       "Página Phones",
       style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.deepPurple),
     ),
+    Text(
+      "Página Person",
+      style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.deepPurple),
+    ),
+
   ];
 
   @override
@@ -39,6 +44,7 @@ class _HomeState extends State<Home> {
           child: body[_currentIndex]
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
         currentIndex: _currentIndex,
         items: const [
@@ -53,6 +59,10 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
               icon: Icon(Icons.add_call),
               label: 'Phones'
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Person'
           ),
         ],
         onTap: (myIndex) {
